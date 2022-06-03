@@ -20,7 +20,7 @@ ol[class] {
   padding: 0;
 }
 
-body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+body,  p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
 }
 
@@ -66,6 +66,42 @@ input, button, textarea, select {
     scroll-behavior: auto !important;
   }
 }
+
+.btnBlue {
+  padding: 2rem 4rem;
+  background: $blue;
+  color: $white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 5.5rem;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+}
+
+.btnWhite {
+  padding: 2rem 4rem;
+  background: $white;
+  color: $blue;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 5.5rem;
+  cursor: pointer;
+  border: 2px solid $blue;
+  transition: .3s;
+}
+
+.btnBlue:hover{
+  background: $light_blue;
+  border: .1rem solid $black;
+}
+
+.btnWhite:hover{
+  background: $light_blue;
+  color: $white;
+  border: .1rem solid $black;
+}
+
 
 .container {
   width: 100%;
@@ -142,6 +178,101 @@ input, button, textarea, select {
   color: $black;
 }
 
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+
+  &-title {
+    font-weight: bold;
+    font-size: 2.8rem;
+    color: $black;
+    margin-bottom: 2.5rem;
+  }
+
+  &-text{
+    font-weight: lighter;
+    font-size: 2.1rem;
+    margin-bottom: 4.5rem;
+  }
+}
+
+// ============SERVICES SECTION================
+
+.services {
+  background: url(../assets/img/servicesBg.sbg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-title {
+    font-weight: bold;
+    font-size: 3.6rem;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  &-title::after{
+    content: " ";
+    display: block;
+    background: $black;
+    margin: 3rem 0rem;
+    width: 5rem;
+    height: 3px;
+  }
+
+  &-text {
+    font-size: 1.8rem;
+    color: $gray;
+    margin-bottom: 8rem;
+    text-align: center;
+  }
+
+  &-btn{
+    margin-bottom: 5rem;
+  }
+
+  &-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+  &-container{
+    width: 100%;
+    max-width: 30.33333%;
+    padding: 4.5rem 3rem;
+    box-shadow: 3px 6px 15px -5px #000000;
+    display: block;
+    margin-right: 2.5rem;
+  }
+
+  &-items-title {
+    font-weight: bold;
+    font-size: 2.4rem;
+    color: $black;
+    margin: 2rem 0rem !important;
+  }
+
+  &-items-text {
+    font-size: 1.6rem;
+    color: $gray;
+    line-height: 2.8rem;
+  }
+
+  }
+
+}
+
+
+
+
+
 
 
 
@@ -159,7 +290,17 @@ input, button, textarea, select {
     padding: 2rem;
   }
 
+  .header-inner img {
+    scale: 80%;
+  }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 991px){
   html{
@@ -174,6 +315,12 @@ input, button, textarea, select {
   #menu-btn{
     display: inline-block !important;
   }
+
+  header{
+    height: 50vh !important;
+    margin-bottom: 2rem;
+  }
+
 
   .navbar-menu{
     display: none !important;
@@ -205,8 +352,20 @@ input, button, textarea, select {
     font-size: 3rem;
   }
 
-
+  .header-inner img {
+    display: none;
+  }
+  
+  .header-inner-title {
+    margin-bottom: 1.5rem;
+  }
+  .header-inner-text {
+    margin-bottom: 1.5rem;
+  }
 }
+
+
+
 
 
 
@@ -217,7 +376,19 @@ input, button, textarea, select {
   .container {
     padding: 1.5rem;
   }
+
   
+  
+  .header-inner {
+    justify-content: center;
+
+    &-content{
+      justify-content: center;
+    }
+  }
+  
+  
+
 }
 
 

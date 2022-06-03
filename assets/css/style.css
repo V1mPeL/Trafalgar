@@ -14,7 +14,7 @@ ol[class] {
   padding: 0;
 }
 
-body, h1, h2, h3, h4, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+body, p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
   margin: 0;
 }
 
@@ -58,6 +58,43 @@ input, button, textarea, select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.btnBlue {
+  padding: 2rem 4rem;
+  background: #458FF6;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 5.5rem;
+  cursor: pointer;
+  border: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btnWhite {
+  padding: 2rem 4rem;
+  background: #fff;
+  color: #458FF6;
+  font-size: 1.6rem;
+  font-weight: bold;
+  border-radius: 5.5rem;
+  cursor: pointer;
+  border: 2px solid #458FF6;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btnBlue:hover {
+  background: #5B9BF3;
+  border: 0.1rem solid #000;
+}
+
+.btnWhite:hover {
+  background: #5B9BF3;
+  color: #fff;
+  border: 0.1rem solid #000;
 }
 
 .container {
@@ -153,12 +190,131 @@ input, button, textarea, select {
   color: #000;
 }
 
+.header-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.header-inner-title {
+  font-weight: bold;
+  font-size: 2.8rem;
+  color: #000;
+  margin-bottom: 2.5rem;
+}
+
+.header-inner-text {
+  font-weight: lighter;
+  font-size: 2.1rem;
+  margin-bottom: 4.5rem;
+}
+
+.services {
+  background: url(../assets/img/servicesBg.sbg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services-title {
+  font-weight: bold;
+  font-size: 3.6rem;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services-title::after {
+  content: " ";
+  display: block;
+  background: #000;
+  margin: 3rem 0rem;
+  width: 5rem;
+  height: 3px;
+}
+
+.services-text {
+  font-size: 1.8rem;
+  color: #7D7987;
+  margin-bottom: 8rem;
+  text-align: center;
+}
+
+.services-btn {
+  margin-bottom: 5rem;
+}
+
+.services-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.services-items-container {
+  width: 100%;
+  max-width: 30.33333%;
+  padding: 4.5rem 3rem;
+  -webkit-box-shadow: 3px 6px 15px -5px #000000;
+          box-shadow: 3px 6px 15px -5px #000000;
+  display: block;
+  margin-right: 2.5rem;
+}
+
+.services-items-items-title {
+  font-weight: bold;
+  font-size: 2.4rem;
+  color: #000;
+  margin: 2rem 0rem !important;
+}
+
+.services-items-items-text {
+  font-size: 1.6rem;
+  color: #7D7987;
+  line-height: 2.8rem;
+}
+
 @media (max-width: 1200px) {
   html {
     font-style: 55%;
   }
   .container {
     padding: 2rem;
+  }
+  .header-inner img {
+    scale: 80%;
   }
 }
 
@@ -172,6 +328,10 @@ input, button, textarea, select {
   }
   #menu-btn {
     display: inline-block !important;
+  }
+  header {
+    height: 50vh !important;
+    margin-bottom: 2rem;
   }
   .navbar-menu {
     display: none !important;
@@ -210,11 +370,30 @@ input, button, textarea, select {
     margin: 1rem;
     font-size: 3rem;
   }
+  .header-inner img {
+    display: none;
+  }
+  .header-inner-title {
+    margin-bottom: 1.5rem;
+  }
+  .header-inner-text {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .container {
     padding: 1.5rem;
+  }
+  .header-inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-inner-content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
