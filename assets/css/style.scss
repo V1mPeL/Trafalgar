@@ -20,7 +20,7 @@ ol[class] {
   padding: 0;
 }
 
-body,  p, ul[class], ol[class], li, figure, figcaption, blockquote, dl, dd {
+body {
   margin: 0;
 }
 
@@ -196,16 +196,38 @@ input, button, textarea, select {
     font-size: 2.1rem;
     margin-bottom: 4.5rem;
   }
+
+  .header-inner img {
+    width: 60%;
+    height: auto;
+  }
 }
+
+
+
+
+
+
+
+
+
 
 // ============SERVICES SECTION================
 
 .services {
-  background: url(../assets/img/servicesBg.sbg);
+  background: url(/assets/img/servicesBg.svg), url(/assets/img/servicesBg2.svg), url(/assets/img/servicesBg2.svg);
+  background-position: left, right, right bottom;
+  background-repeat: no-repeat, no-repeat, no-repeat;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   &-title {
     font-weight: bold;
@@ -235,45 +257,80 @@ input, button, textarea, select {
 
   &-btn{
     margin-bottom: 5rem;
+    margin-top: 4rem;
   }
 
   &-items{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-
-  &-container{
     width: 100%;
-    max-width: 30.33333%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.5rem;
+    margin-bottom: 4rem;
+  }
+}
+  .services-items-container{
     padding: 4.5rem 3rem;
     box-shadow: 3px 6px 15px -5px #000000;
     display: block;
-    margin-right: 2.5rem;
   }
 
-  &-items-title {
+  .services-items-title {
     font-weight: bold;
     font-size: 2.4rem;
     color: $black;
-    margin: 2rem 0rem !important;
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
   }
 
-  &-items-text {
+  .services-items-text {
     font-size: 1.6rem;
     color: $gray;
     line-height: 2.8rem;
   }
+  
 
-  }
 
+// ==========INFO SECTION=================
+
+.info-wrapper {
+  margin-top: 10rem;
 }
 
+.info-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
 
+  &-title {
+    font-weight: bold;
+    font-size: 2.8rem;
+    color: $black;
+    margin-bottom: 2.5rem;
+  }
 
+  &-text{
+    font-weight: lighter;
+    font-size: 2.1rem;
+    margin-bottom: 4.5rem;
+  }
+}
 
+.info1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.info2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.info-image {
+  scale: 90%;
+}
 
 
 
@@ -292,6 +349,12 @@ input, button, textarea, select {
 
   .header-inner img {
     scale: 80%;
+  }
+
+  .header-inner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -338,18 +401,24 @@ input, button, textarea, select {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-
+    
+  }
     #navbar-menu-close {
       display: block !important; 
       position: absolute;
       top: 1rem; right: 1.5rem;
     }
+
     
-  }
+
 
   .navbar-link{
     margin: 1rem;
     font-size: 3rem;
+  }
+
+  .header{
+    background: #f2f4f7;
   }
 
   .header-inner img {
@@ -362,6 +431,41 @@ input, button, textarea, select {
   .header-inner-text {
     margin-bottom: 1.5rem;
   }
+
+  .navbar-wrapper {
+    border-bottom: 1px solid $black;
+  }
+  
+  .services {
+    background-position: left, right top, left bottom;
+  }
+
+  .services-items{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info1 {
+    background: url(/assets/img/servicesBg.svg) center no-repeat;
+  } 
+
+  .info2 {
+    background: url(/assets/img/servicesBg2.svg), url(/assets/img/servicesBg2.svg);
+    background-repeat: no-repeat, no-repeat ;
+    background-position: center, right;
+  } 
+
+
+  .info-inner-title {
+    margin-bottom: 1.5rem;
+  }
+  .info-inner-text {
+    margin-bottom: 1.5rem;
+  }
+
+  .info-inner img {
+    display: none;
+  }
+
 }
 
 
@@ -377,17 +481,14 @@ input, button, textarea, select {
     padding: 1.5rem;
   }
 
-  
-  
-  .header-inner {
-    justify-content: center;
-
-    &-content{
-      justify-content: center;
-    }
+  .services {
+    background-repeat: repeat, no-repeat, no-repeat;
   }
-  
-  
+
+  .services-items {
+    grid-template-columns: 400px;
+    justify-content: center;
+  }
 
 }
 
@@ -404,5 +505,10 @@ input, button, textarea, select {
     padding: 1rem;
   }
 
+  .services-items {
+    grid-template-columns: 300px;
+    margin-bottom: 3rem;
+  }
+  
 }
 
