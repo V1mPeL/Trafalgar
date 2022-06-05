@@ -114,6 +114,7 @@ input, button, textarea, select {
   height: 100vh;
 }
 
+
 .navbar-wrapper .logo {
   display: flex;
 }
@@ -336,6 +337,225 @@ input, button, textarea, select {
 
 
 
+
+
+
+
+
+
+
+
+
+// ========REVIEW SECTION==========
+
+
+.swiper-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+
+.review-wrapper{
+  display: flex;
+  
+  gap: 3rem;
+}
+
+.review-title{
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-title::after{
+  content: " ";
+    display: block;
+    background: $white;
+    margin: 2rem 0;
+    width: 5rem;
+    height: 3px;
+}
+
+.swiper-slide {
+  align-items: center;
+  padding: 6rem 10rem;
+  display: flex;
+  flex-direction: column;
+  
+  background: rgb(69,143,246) !important;
+  background: linear-gradient(19deg, rgba(69,143,246,1) 0%, rgba(91,155,243,1) 100%) !important; 
+  border-radius: 2.4rem;
+}
+
+
+
+
+.person {
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+  width: 100%;
+}
+
+.person-name {
+    margin-left: 2rem;
+    color: $white;
+}
+
+.person-name-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.person-name-subtitle {
+  font-size: 1.8rem;
+}
+
+.comment{
+  color: $white;
+  font-size: 1.9rem;
+}
+
+
+
+// ===========OUR ARTICLES SECTION ====================
+
+.articles-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3.5rem;
+  background: url(/assets/img/servicesBg2.svg) left  no-repeat;
+  background: url(/assets/img/articleBg.svg) right no-repeat;
+}
+
+.article-item{
+  border-radius: 3.5rem;
+  display: block;
+  box-shadow: 3px 6px 15px -5px #000000;
+}
+
+.article-item-wrapper {
+  padding: 2rem;
+}
+
+.article-item-img {
+  border-radius: 3.5rem 3.5rem 0 0;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.4rem;
+}
+
+.article-item-title {
+  font-size: 2.1rem;
+  font-weight: bold;
+  color: $black;
+}
+
+.article-item-text {
+  color: $gray;
+  margin-top: 1.2rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.6rem;
+}
+
+
+.article-item-link {
+  font-size: 1.7rem;
+  color: $light_blue;
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+
+.articles-wrapper button {
+  margin-top: 5rem;
+}
+
+
+// =========FOOTER SECTION============
+
+
+footer {
+  background: rgb(69,143,246) !important;
+  background: linear-gradient(19deg, rgba(69,143,246,1) 0%, rgba(91,155,243,1) 100%) !important; 
+  background: url(/assets/img/servicesBg2.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  padding: 10rem;
+  
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.footer-copytights {
+  display: block;
+  color: $white;
+}
+
+.footer-copyrights-text {
+  color: $white;
+  font-size: 1.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.copyrights {
+  color: $white;
+  font-size: 1.6rem;
+}
+
+
+
+.footer-links {
+  color: $white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10rem;
+  white-space: nowrap;
+
+}
+
+.links-group {
+  display: block;
+  color: $white;
+}
+
+.links-group-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.links-group-list-link {
+  color: $white;
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.links-group-list-item {
+  margin-top: 1rem;
+}
+
+
+
+
+
 // MEDIA QUERIES
 
 @media (max-width: 1200px){
@@ -368,7 +588,6 @@ input, button, textarea, select {
 @media (max-width: 991px){
   html{
     font-style: 55%;
-    padding: 2rem;
   }
 
   .container {
@@ -466,6 +685,28 @@ input, button, textarea, select {
     display: none;
   }
 
+  .review-wrapper{
+    display: block;
+    
+    gap: 3rem;
+  }
+
+  .articles-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+
+  .footer-wrapper {
+    display: block;
+  }
+
+  .footer-links{
+    margin-top: 10rem !important;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
 }
 
 
@@ -490,6 +731,14 @@ input, button, textarea, select {
     justify-content: center;
   }
 
+  .articles-container {
+    grid-template-columns: 300px;
+  }
+
+  .footer-links{
+    grid-template-columns: 300px;
+    gap: 3.5rem;
+  }
 }
 
 
@@ -509,6 +758,8 @@ input, button, textarea, select {
     grid-template-columns: 300px;
     margin-bottom: 3rem;
   }
+  
+
   
 }
 
