@@ -4,6 +4,8 @@ $white: #fff;
 $black: #000;
 $gray: #7D7987;
 $light_black: #1F1534;
+
+
 html {
   font-size: 62.5%;
 }
@@ -348,12 +350,21 @@ input, button, textarea, select {
 
 // ========REVIEW SECTION==========
 
+.swiper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swiper-btns {
+  display: flex;
+  gap: 3rem;
+}
 
 .swiper-wrapper{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3rem;
 }
 
 .review-wrapper{
@@ -551,6 +562,10 @@ footer {
 .links-group-list-item {
   margin-top: 1rem;
 }
+
+
+
+
 
 
 

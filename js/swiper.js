@@ -1,8 +1,6 @@
-import Swiper from 'swiper';
-
 const swiper = new Swiper('.swiper', {
   // Optional parameters
-  direction: 'vertical',
+  
   loop: true,
   efect :'fade',
 
