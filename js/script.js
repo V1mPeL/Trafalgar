@@ -16,19 +16,60 @@
     }
 
     
-const swiper = new Swiper('.swiper', {
-        // Optional parameters
-        loop: true,
+try{const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+} catch {
+  console.log("Swiper error")
+}
       
-        // If we need pagination
-        pagination: {
-          el: '.swiper-pagination',
-        },
-      
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-      
+
+
+console.clear();
+
+let signupBtn = document.querySelector('.app.front .btn.signup');
+let loginBtn = document.querySelector('.app.back .btn.login');
+let loginForm = document.querySelector('.app.front');
+let signupForm = document.querySelector('.app.back');
+let container = document.querySelector('.modalcontainer');
+let modal = document.querySelector('.modal');
+let modalCloseBtn = document.querySelector('.modal-close');
+let blueBtn = document.querySelectorAll('.btnBlue');
+let whiteBtn = document.querySelectorAll('.btnWhite');
+
+signupBtn.addEventListener('click', () => {
+	container.classList.toggle('active');
+});
+loginBtn.addEventListener('click', () => {
+	container.classList.toggle('active');
+});
+
+modalCloseBtn.addEventListener('click', () => {
+  modal.classList.toggle('displaynone');
+});
+
+blueBtn.forEach(addEventListener('click', () => {
+  modal.classList.remove('displaynone');
+})
+);
+
+whiteBtn.forEach(addEventListener('click', () => {
+  modal.classList.remove('displaynone');
+})
+);
+
+
+
+
