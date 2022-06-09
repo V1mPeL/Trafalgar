@@ -398,29 +398,33 @@ input, button, textarea, select {
   gap: 3rem;
 }
 
-.swiper-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .review-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 3rem;
+  align-items: center;
+  padding: 6rem 10rem;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #458ff6 !important;
+  background: linear-gradient(19deg, #458ff6 0%, #5b9bf3 100%) !important;
+  border-radius: 2.4rem;
 }
 
 .review-title {
   font-size: 3.6rem;
   font-weight: bold;
-  color: #fff;
+  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,27 +440,10 @@ input, button, textarea, select {
 .review-title::after {
   content: " ";
   display: block;
-  background: #fff;
+  background: #000;
   margin: 2rem 0;
   width: 5rem;
   height: 3px;
-}
-
-.swiper-slide {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 6rem 10rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background: #458ff6 !important;
-  background: linear-gradient(19deg, #458ff6 0%, #5b9bf3 100%) !important;
-  border-radius: 2.4rem;
 }
 
 .person {

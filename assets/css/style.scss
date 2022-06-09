@@ -340,14 +340,6 @@ input, button, textarea, select {
 
 
 
-
-
-
-
-
-
-
-
 // ========REVIEW SECTION==========
 
 .swiper {
@@ -361,37 +353,13 @@ input, button, textarea, select {
   gap: 3rem;
 }
 
-.swiper-wrapper{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .review-wrapper{
   display: flex;
-  
-  gap: 3rem;
-}
-
-.review-title{
-  font-size: 3.6rem;
-  font-weight: bold;
-  color: $white;
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-}
-
-.review-title::after{
-  content: " ";
-    display: block;
-    background: $white;
-    margin: 2rem 0;
-    width: 5rem;
-    height: 3px;
-}
-
-.swiper-slide {
+  gap: 3rem;
   align-items: center;
   padding: 6rem 10rem;
   display: flex;
@@ -401,6 +369,26 @@ input, button, textarea, select {
   background: linear-gradient(19deg, rgba(69,143,246,1) 0%, rgba(91,155,243,1) 100%) !important; 
   border-radius: 2.4rem;
 }
+
+.review-title{
+  font-size: 3.6rem;
+  font-weight: bold;
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review-title::after{
+  content: " ";
+    display: block;
+    background: $black;
+    margin: 2rem 0;
+    width: 5rem;
+    height: 3px;
+}
+
+
 
 
 
