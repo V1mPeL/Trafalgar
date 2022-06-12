@@ -45,9 +45,11 @@ let loginForm = document.querySelector('.app.front');
 let signupForm = document.querySelector('.app.back');
 let container = document.querySelector('.modalcontainer');
 let modal = document.querySelector('.modal');
-let modalCloseBtn = document.querySelector('.modal-close');
+let modalCloseBtn = document.querySelector('#modal-close');
 let blueBtn = document.querySelectorAll('.btnBlue');
 let whiteBtn = document.querySelectorAll('.btnWhite');
+let modalWindow = document.querySelector('.modal-wrapper');
+
 
 signupBtn.addEventListener('click', () => {
 	container.classList.toggle('active');
@@ -60,16 +62,33 @@ modalCloseBtn.addEventListener('click', () => {
   modal.classList.toggle('displaynone');
 });
 
-blueBtn.forEach(addEventListener('click', () => {
-  modal.classList.remove('displaynone');
-})
-);
+for (let i = 0; i < blueBtn.length; i++) {
+  let self = blueBtn[i];
 
-whiteBtn.forEach(addEventListener('click', () => {
-  modal.classList.remove('displaynone');
-})
-);
+  self.addEventListener('click', function (event) {  
+      // prevent browser's default action
+      event.preventDefault();
 
+      modal.classList.remove('displaynone');
+  }, false);
+}
 
+for (let i = 0; i < whiteBtn.length; i++) {
+  let self = whiteBtn[i];
 
+  self.addEventListener('click', function (event) {  
+      // prevent browser's default action
+      event.preventDefault();
+
+      modal.classList.remove('displaynone');
+  }, false);
+}
+
+// modalWindow.addEventListener('click', (e)=>{
+//   if (e.target === modalWindow){
+//     modal.classList.toggle('displaynone');
+//   }
+// })
+
+ 
 
